@@ -176,6 +176,10 @@ class MachineLearning:
         except Exception as e:
             print(e)
             self.speak_("Sorry something went wrong!", 'red')
+    def shutdown(self, input):
+        if "shutdown" in self.inpur or "quit" in self.input:
+            self.speak("ok sir, command for system shutdown")
+            os._exit(1)
 
 
     def email_(self, input):
